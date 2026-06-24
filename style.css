@@ -7,12 +7,10 @@
 body{
     background:#000;
     color:white;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     overflow:hidden;
     transition:1.5s;
 }
-
-/* Screens */
 
 .screen{
     height:100vh;
@@ -34,8 +32,7 @@ h1{
 }
 
 p{
-    font-size:1.1rem;
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
 button{
@@ -45,9 +42,8 @@ button{
     cursor:pointer;
     font-size:1rem;
     font-weight:bold;
+    margin-top:10px;
 }
-
-/* Lights Effect */
 
 .lights-on{
     background:linear-gradient(
@@ -56,6 +52,19 @@ button{
         #ff66cc,
         #66ccff
     );
+}
+
+/* Message */
+
+#typedMessage{
+    max-width:800px;
+    line-height:1.8;
+    font-size:1.1rem;
+    white-space:pre-wrap;
+    text-align:left;
+    padding:20px;
+    overflow-y:auto;
+    max-height:60vh;
 }
 
 /* Balloons */
@@ -81,7 +90,6 @@ button{
 .balloon:nth-child(1){
     left:10%;
     background:#ff4d6d;
-    animation-delay:0s;
 }
 
 .balloon:nth-child(2){
@@ -121,26 +129,22 @@ button{
 }
 
 @keyframes floatUp{
-
-    0%{
+    from{
         transform:translateY(0);
     }
 
-    100%{
+    to{
         transform:translateY(-120vh);
     }
-
 }
-
-/* Mobile */
 
 @media(max-width:768px){
 
     h1{
-        font-size:2.2rem;
+        font-size:2.1rem;
     }
 
-    p{
+    #typedMessage{
         font-size:1rem;
     }
 
