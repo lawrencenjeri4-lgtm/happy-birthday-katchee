@@ -6,9 +6,12 @@ const continueBtn = document.getElementById("continueBtn");
 const welcome = document.getElementById("welcome");
 const lightsScreen = document.getElementById("lightsScreen");
 const messageScreen = document.getElementById("messageScreen");
+const galleryScreen = document.getElementById("galleryScreen");
 
 const balloons = document.getElementById("balloons");
 const typedMessage = document.getElementById("typedMessage");
+
+const finalBtn = document.getElementById("finalBtn");
 
 const message = `Hey Sheey ❤️
 
@@ -62,11 +65,13 @@ messageBtn.addEventListener("click", () => {
     lightsScreen.classList.add("hidden");
     messageScreen.classList.remove("hidden");
 
+    typedMessage.textContent = "";
+
     startTyping();
 
 });
 
-function startTyping(){
+function startTyping() {
 
     let index = 0;
 
@@ -76,7 +81,7 @@ function startTyping(){
 
         index++;
 
-        if(index >= message.length){
+        if (index >= message.length) {
 
             clearInterval(typing);
 
@@ -87,3 +92,17 @@ function startTyping(){
     }, 35);
 
 }
+
+continueBtn.addEventListener("click", () => {
+
+    messageScreen.classList.add("hidden");
+
+    galleryScreen.classList.remove("hidden");
+
+});
+
+finalBtn.addEventListener("click", () => {
+
+    alert("More surprises coming in V4 ❤️🎂✨");
+
+});
