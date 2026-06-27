@@ -11,6 +11,15 @@ const galleryScreen = document.getElementById("galleryScreen");
 const balloons = document.getElementById("balloons");
 const typedMessage = document.getElementById("typedMessage");
 
+const slideshowScreen =
+document.getElementById("slideshowScreen");
+
+const slideImage =
+document.getElementById("slideImage");
+
+const birthdaySong =
+document.getElementById("birthdaySong");
+
 const finalBtn = document.getElementById("finalBtn");
 
 const message = `Hey Sheey ❤️
