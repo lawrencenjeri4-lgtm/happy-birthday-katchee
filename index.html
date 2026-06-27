@@ -1,93 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Sheey ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body><!-- Welcome Screen -->
+<section id="welcome" class="screen">
+    <h1>Happy Birthday Sheey ❤️</h1>
+    <p>A special surprise is waiting for you...</p>
 
-    <!-- Welcome Screen -->
-    <section id="welcome" class="screen">
-        <h1>Happy Birthday Sheey ❤️</h1>
-        <p>A special surprise is waiting for you...</p>
+    <button id="startBtn">
+        Open Your Surprise 🎁
+    </button>
+</section>
 
-        <button id="startBtn">
-            Open Your Surprise 🎁
-        </button>
-    </section>
+<!-- Lights Screen -->
+<section id="lightsScreen" class="screen hidden">
+    <h1>Ready Sheey? ✨</h1>
+    <p>Let's light up your special day!</p>
 
-    <!-- Lights Screen -->
-    <section id="lightsScreen" class="screen hidden">
-        <h1>Ready Sheey? ✨</h1>
-        <p>Let's light up your special day!</p>
+    <button id="lightsBtn">
+        Turn On The Lights 💡
+    </button>
 
-        <button id="lightsBtn">
-            Turn On The Lights 💡
-        </button>
+    <button id="messageBtn" class="hidden">
+        Read Lawrence's Message ❤️
+    </button>
+</section>
 
-        <button id="messageBtn" class="hidden">
-            Read Lawrence's Message ❤️
-        </button>
-    </section>
+<!-- Message Screen -->
+<section id="messageScreen" class="screen hidden">
 
-    <!-- Message Screen -->
-    <section id="messageScreen" class="screen hidden">
+    <h1>For My Sheey ❤️</h1>
 
-        <h1>For My Sheey ❤️</h1>
+    <div id="typedMessage"></div>
 
-        <div id="typedMessage"></div>
+    <button id="continueBtn" class="hidden">
+        Continue ➡️
+    </button>
 
-        <button id="continueBtn" class="hidden">
-            Continue ➡️
-        </button>
+</section>
 
-    </section>
+<!-- Slideshow Screen -->
 
-    <!-- Gallery Screen -->
-    <section id="galleryScreen" class="screen hidden">
+<section id="slideshowScreen" class="screen hidden">
 
-        <h1>Beautiful Memories ❤️</h1>
+    <h1>Happy Birthday Sheey ❤️</h1>
 
-        <div class="gallery">
+    <img
+        id="slideImage"
+        src="assets/photos/photo1.jpg"
+        alt="Sheey"
+    >
 
-            <img src="assets/photos/photo1.jpg">
-            <img src="assets/photos/photo2.jpg">
-            <img src="assets/photos/photo3.jpg">
-            <img src="assets/photos/photo4.jpg">
-            <img src="assets/photos/photo5.jpg">
-            <img src="assets/photos/photo6.jpg">
-            <img src="assets/photos/photo7.jpg">
-            <img src="assets/photos/photo8.jpg">
-            <img src="assets/photos/photo9.jpg">
-            <img src="assets/photos/photo10.jpg">
-            <img src="assets/photos/photo11.jpg">
-            <img src="assets/photos/photo12.jpg">
-            <img src="assets/photos/photo13.jpg">
-            <img src="assets/photos/photo14.jpg">
-            <img src="assets/photos/photo15.jpg">
+    <audio id="birthdaySong" controls>
+        <source
+            src="assets/music/happy-birthday.mp3"
+            type="audio/mpeg">
+    </audio>
 
-        </div>
+</section>
 
-        <button id="finalBtn">
-            One More Surprise ❤️
-        </button>
+<!-- Balloons -->
+<div id="balloons" class="hidden">
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+</div>
 
-    </section>
-
-    <!-- Balloons -->
-    <div id="balloons" class="hidden">
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-    </div>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
