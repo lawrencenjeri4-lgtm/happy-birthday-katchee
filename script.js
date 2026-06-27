@@ -6,21 +6,13 @@ const continueBtn = document.getElementById("continueBtn");
 const welcome = document.getElementById("welcome");
 const lightsScreen = document.getElementById("lightsScreen");
 const messageScreen = document.getElementById("messageScreen");
-const galleryScreen = document.getElementById("galleryScreen");
 
 const balloons = document.getElementById("balloons");
 const typedMessage = document.getElementById("typedMessage");
 
-const slideshowScreen =
-document.getElementById("slideshowScreen");
-
-const slideImage =
-document.getElementById("slideImage");
-
-const birthdaySong =
-document.getElementById("birthdaySong");
-
-const finalBtn = document.getElementById("finalBtn");
+const slideshowScreen = document.getElementById("slideshowScreen");
+const slideImage = document.getElementById("slideImage");
+const birthdaySong = document.getElementById("birthdaySong");
 
 const message = `Hey Sheey ❤️
 
@@ -64,7 +56,9 @@ lightsBtn.addEventListener("click", () => {
     balloons.classList.remove("hidden");
 
     setTimeout(() => {
+
         messageBtn.classList.remove("hidden");
+
     }, 2000);
 
 });
@@ -106,12 +100,28 @@ continueBtn.addEventListener("click", () => {
 
     messageScreen.classList.add("hidden");
 
-    galleryScreen.classList.remove("hidden");
+    slideshowScreen.classList.remove("hidden");
+
+    birthdaySong.play();
+
+    startSlideshow();
 
 });
 
-finalBtn.addEventListener("click", () => {
+function startSlideshow() {
 
-    alert("More surprises coming in V4 ❤️🎂✨");
+    let current = 1;
 
-});
+    setInterval(() => {
+
+        current++;
+
+        if (current > 15) {
+            current = 1;
+        }
+
+        slideImage.src = `assets/photos/photo${current}.jpg`;
+
+    }, 3000);
+
+}
