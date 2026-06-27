@@ -187,3 +187,21 @@ button{
     }
 
 }
+/* Slideshow */
+
+#slideshowScreen{
+    background:black;
+}
+
+#slideImage{
+    width:90%;
+    max-width:450px;
+    height:auto;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 25px rgba(255,255,255,.3);
+
+    transition:1s;
+    }
