@@ -52,7 +52,6 @@ startBtn.addEventListener("click", () => {
 lightsBtn.addEventListener("click", () => {
 
     document.body.classList.add("lights-on");
-
     balloons.classList.remove("hidden");
 
     setTimeout(() => {
@@ -99,11 +98,15 @@ function startTyping() {
 continueBtn.addEventListener("click", () => {
 
     messageScreen.classList.add("hidden");
-
     slideshowScreen.classList.remove("hidden");
 
+    // Show the first photo immediately
+    slideImage.src = "assets/photos/photo 1.jpg";
+
+    // Play the birthday song
     birthdaySong.play();
 
+    // Start slideshow
     startSlideshow();
 
 });
@@ -117,10 +120,13 @@ function startSlideshow() {
         current++;
 
         if (current > 15) {
+
             current = 1;
+
         }
 
-        slideImage.src = `assets/photos/photo${current}.jpg`;
+        // NOTE THE SPACE after "photo"
+        slideImage.src = `assets/photos/photo ${current}.jpg`;
 
     }, 3000);
 
